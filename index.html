@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Is Durga Parsai in Jail?</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('durga_parsai.jpg') center/cover no-repeat fixed;
+      color: #f5f5f5;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* The answer */
+    .answer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .answer-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      opacity: 0.6;
+    }
+
+    .answer-text {
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .answer-text.yes {
+      color: #ff4d4d;
+      text-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
+    }
+
+    .answer-text.no {
+      color: #4dff88;
+      text-shadow: 0 0 20px rgba(77, 255, 136, 0.5);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="answer">
+      <span class="answer-text" id="answerText"></span>
+    </div>
+  </div>
+
+  <script>
+    // Change to "Yes" or "No" as needed
+    const ANSWER = "No";
+
+    const answerText = document.getElementById('answerText');
+    answerText.textContent = ANSWER;
+    answerText.className = 'answer-text ' + ANSWER.toLowerCase();
+  </script>
+</body>
+</html>
